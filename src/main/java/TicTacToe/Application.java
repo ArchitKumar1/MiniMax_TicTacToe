@@ -17,14 +17,19 @@ public class Application {
 
         Player winner = run(board);
         assert winner != null;
-        System.out.println("Player " + winner.toString() + " has won");
+        Result result = winner.getResultFromPlayer();
+        if (result == Result.Draw) {
+            System.out.println("Game's a Draw");
+        } else {
+            System.out.println("Player " + winner.toString() + " has won");
+        }
     }
 
     private Player run(Board board) throws Exception {
 
         Position position = players.solve(board);
         if (position == null) {
-            return Player.C;
+            return null;
         }
         boolean didWin = board.makeMove(position);
         System.out.println(board);

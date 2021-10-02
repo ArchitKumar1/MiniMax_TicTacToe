@@ -1,5 +1,7 @@
 package TicTacToe.Enums;
 
+import TicTacToe.Result;
+
 public enum Player {
     A,
     B,
@@ -15,5 +17,17 @@ public enum Player {
 
     public Player getOppositePlayer() {
         return (this == Player.A ? Player.B : Player.A);
+    }
+
+
+    public Result getResultFromPlayer() {
+        if (this == Player.A) {
+            return Result.PlayerA;
+        }
+        if (this == Player.B) {
+            return Result.PlayerB;
+        } else {
+            return Result.Draw;
+        }
     }
 }
