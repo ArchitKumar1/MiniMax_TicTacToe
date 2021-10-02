@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
 
-        Players players = new Players(new Human(),new Computer());
+        Players players = new Players(new Computer(),new Computer());
 
         Application application = new Application(players);
         application.runNewGame();

@@ -16,12 +16,10 @@ public class Application {
         board.setToDefault();
 
         Player winner = run(board);
-        assert winner != null;
-        Result result = winner.getResultFromPlayer();
-        if (result == Result.Draw) {
-            System.out.println("Game's a Draw");
+        if (winner != null) {
+            System.out.println("Player " + winner.getResultFromPlayer().toString() + " has won");
         } else {
-            System.out.println("Player " + winner.toString() + " has won");
+            System.out.println("Game's a Draw");
         }
     }
 

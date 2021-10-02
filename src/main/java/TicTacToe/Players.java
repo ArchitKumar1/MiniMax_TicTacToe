@@ -17,6 +17,7 @@ public class Players {
         }else{
             return solverB.getPosition(board);
         }
+
     }
 
 }

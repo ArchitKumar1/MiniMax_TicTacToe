@@ -75,10 +75,7 @@ public class Board {
         if (row < 0 || row > (DIM - 1)) {
             return false;
         }
-        if (col < 0 || col > (DIM - 1)) {
-            return false;
-        }
-        return true;
+        return col >= 0 && col <= (DIM - 1);
     }
 
     public boolean checkWin(int row, int col) {
